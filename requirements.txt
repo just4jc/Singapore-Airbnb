@@ -1,3 +1,6 @@
 streamlit
 pandas
-sklearn
+scikit-learn
+pydeck
+pickle
+bz2
