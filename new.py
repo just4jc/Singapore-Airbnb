@@ -172,7 +172,7 @@ with tab2:
             'Sembawang': 1,
             'Woodlands': 2,
             'Yishun': 3,
-            'Water Catchment': 4,
+            'Central Water Catchment': 4,
             'Lim Chu Kang': 5,
             'Sungei Kadut': 6,
         },
