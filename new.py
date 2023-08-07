@@ -117,9 +117,14 @@ with tab2:
     # Load the serialized trained model rf.pkl and scaler object scaler.pkl
     with open('rf.pkl', 'rb') as file:
         rf = pickle.load(file)
+<<<<<<< HEAD
         
     #with open('scaler.pkl', 'rb') as file:
     #    scaler = pickle.load(file)
+=======
+    with open('scaler.pkl', 'rb') as file:
+        scaler = pickle.load(file)
+>>>>>>> streamlit-app
 
     # Load the cleaned and transformed dataset
     df = pd.read_csv('listings_new2.csv')
@@ -230,12 +235,20 @@ with tab2:
     if st.button('Predict Price'):
         # Call the function with the selected room_type as an argument
         rt_int = match_room_type(room_type)
+<<<<<<< HEAD
         
+=======
+                
+>>>>>>> streamlit-app
         # Make the prediction   
         input_data = [[minimum_nights, number_of_reviews, calculated_host_listings_count, availability_365, ng_int, n_int, rt_int, reviews_per_month, is_zero]]
         input_df = pd.DataFrame(input_data, columns=['minimum_nights', 'number_of_reviews', 'calculated_host_listings_count','availability_365','neighbourhood_group', 'neighbourhood', 'room_type', 'reviews_per_month', 'is_zero'])
         #prediction = rf.predict(input_df)   
+<<<<<<< HEAD
         #prediction = rf.predict(input_df)[0]
+=======
+        prediction = rf.predict(input_df)[0]
+>>>>>>> streamlit-app
         
         # Populate the output dataframe with the input features and the predicted price
         #output_data = [minimum_nights, number_of_reviews, calculated_host_listings_count, availability_365, ng_input, n_input, rt_int, reviews_per_month, is_zero, prediction[0]]
