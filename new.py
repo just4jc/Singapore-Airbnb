@@ -1,4 +1,4 @@
-import pandas as pd
+from io import StringIO
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -75,7 +75,8 @@ with tab1:
         #converting the filtered data to a JSON-serializable format before passing it to st.pydeck_chart
         # Convert the cleaned DataFrame to JSON
             
-        filtered_data_df = pd.read_json(filtered_data_json)
+        #filtered_data_df = pd.read_json(filtered_data_json)
+        filtered_data_df = pd.read_json(StringIO(filtered_data_json))
         st.pydeck_chart(pdk.Deck(
 
             map_style='mapbox://styles/mapbox/light-v9',
