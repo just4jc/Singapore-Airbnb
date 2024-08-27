@@ -2,3 +2,4 @@ streamlit
 pandas
 scikit-learn==1.2.2
 pydeck
+numpy==1.23.5
